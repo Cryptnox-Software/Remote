@@ -1,0 +1,19 @@
+#!/bin/bash
+mkdir cryptnox_remote
+cd cryptnox_remote
+git clone https://github.com/christopherjude/cryptnoxpy.git
+cd cryptnoxpy/
+pip install .
+cd ..
+git clone https://github.com/christopherjude/cryptnoxpro.git
+cd cryptnoxpro/
+pip install .
+cd ..
+pip install cryptography==3.3.2
+git clone https://gitlab.com/cryptnox-phase3/client-server.git
+echo "=================================================="
+echo "Use command 'python3 remote_interface.py client' or 'python3 remote_interface.py server' to run with desired mode."
+echo "Ports and IP addresses can be changed as preferred in the file."
+echo "The 'remote_interface.py' file can be found: cryptnox_remote/client-server/<here>"
+echo "Thank you!"
+echo "=================================================="
